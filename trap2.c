@@ -63,6 +63,7 @@ int main(int argc, char* argv[]) {
    //if (n % thread_count != 0) Usage(argv[0]);
 
    global_result = 0.0;
+#pragma omp barrier
 #  pragma omp parallel num_threads(thread_count) 
    {
        double start = omp_get_wtime( );
